@@ -2679,11 +2679,11 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       <dl class="spell-stats">
         <dt>Cast</dt><dd>Action</dd>
         <dt>Range</dt><dd>Touch</dd>
-        <dt>Comp</dt><dd>V, S, M (holy symbol)</dd>
+        <dt>Comp</dt><dd>V, S</dd>
         <dt>Dur</dt><dd>Conc. 1 min</dd>
       </dl>
       <div class="spell-body">
-        <p>You touch one willing creature. Once before the spell ends, the target can roll a <strong>d4</strong> and add the number rolled to <strong>one saving throw</strong> of its choice. It can roll before or after the save.</p>
+        <p>Touch a willing creature and choose a damage type: <strong>Acid, Bludgeoning, Cold, Fire, Lightning, Necrotic, Piercing, Poison, Radiant, Slashing,</strong> or <strong>Thunder</strong>. When the creature takes damage of that type before the spell ends, it <strong>reduces the total damage taken by 1d4</strong>. Only benefits once per turn.</p>
       </div>
       <div class="spell-source">Cleric</div>
     </div>
@@ -2760,8 +2760,8 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       </dl>
       <div class="spell-body">
         <p>A creature you touch regains <strong>2d8 + spellcasting mod</strong> HP. This spell has no effect on Undead or Constructs.</p>
-        <p style="font-size:8pt;" class="muted">WIS: 2d8+1 · CHA-slot n/a (Cleric spell)</p>
-        <div class="at-higher"><strong>Higher Levels:</strong> +2d8 per slot above 1st. <em>(At Pact-cast 3rd = 6d8+WIS, but Clah doesn't multiclass-cast this.)</em></div>
+        <p style="font-size:8pt;" class="muted">Pact-cast (CHA +4): 2d8+4 base · <strong>at Pact 3rd: 6d8+4</strong> (avg 31 HP).</p>
+        <div class="at-higher"><strong>Higher Levels:</strong> +2d8 per slot above 1st.</div>
       </div>
       <div class="spell-source">Celestial (always)</div>
     </div>
@@ -2798,8 +2798,8 @@ em.soft { color: var(--ink-muted); font-style: italic; }
         <dt>Dur</dt><dd>1 hour</dd>
       </dl>
       <div class="spell-body">
-        <p>One <strong>Humanoid</strong> you can see within range must succeed on a <strong>Wisdom save</strong> (DC 12 or 15) or have the <strong>Charmed</strong> condition for 1 hour or until you or allies damage it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.</p>
-        <div class="at-higher"><strong>Higher Levels:</strong> +1 target per slot above 1st (each within 30 ft of others).</div>
+        <p>One <strong>Humanoid</strong> you can see within range makes a <strong>Wisdom save</strong>. Target saves with <strong>Advantage</strong> if you or your allies are fighting it. On a failed save, the target has the <strong>Charmed</strong> condition until the spell ends or until you or your allies damage it. The charmed creature is <strong>Friendly</strong> to you. When the spell ends, the target knows it was charmed by you.</p>
+        <div class="at-higher"><strong>Higher Levels:</strong> +1 target per slot above 1st.</div>
       </div>
       <div class="spell-source">Trickery (always)</div>
     </div>
@@ -2833,12 +2833,19 @@ em.soft { color: var(--ink-muted); font-style: italic; }
         <dt>Cast</dt><dd>Action</dd>
         <dt>Range</dt><dd>60 ft</dd>
         <dt>Comp</dt><dd>V</dd>
-        <dt>Dur</dt><dd>1 round</dd>
+        <dt>Dur</dt><dd>Instant</dd>
       </dl>
       <div class="spell-body">
-        <p>Speak a <strong>one-word command</strong> to a creature within range. Target makes a <strong>Wisdom save (DC 15, CHA)</strong>; on failure, it must obey on its next turn. Ineffective on Undead, targets that don't understand the language, or commands that are directly harmful.</p>
-        <p style="font-size:8pt;"><strong>Sample commands:</strong> Approach, Drop, Flee, Grovel, Halt. DM adjudicates similar words.</p>
-        <p class="gold" style="font-size:8pt;"><strong>ϟ Fey Touched:</strong> 1×/LR free, uses CHA. Also castable with any 1st+ slot.</p>
+        <p>Speak a <strong>one-word command</strong> to a creature you can see within range. Target must succeed on a <strong>Wisdom save</strong> or <strong>follow the command on its next turn</strong>. Choose from:</p>
+        <ul style="margin: 1mm 0 0 4mm; padding: 0; font-size: 8pt;">
+          <li><strong>Approach.</strong> Moves toward you by shortest route, ending turn within 5 ft of you.</li>
+          <li><strong>Drop.</strong> Drops whatever it's holding, then ends turn.</li>
+          <li><strong>Flee.</strong> Spends turn moving away from you as fast as possible.</li>
+          <li><strong>Grovel.</strong> Has the Prone condition, then ends turn.</li>
+          <li><strong>Halt.</strong> Doesn't move and takes no action or Bonus Action.</li>
+        </ul>
+        <p class="gold" style="font-size:8pt; margin-top:1mm;"><strong>ϟ Fey Touched:</strong> 1×/LR free, uses CHA. Also castable with any 1st+ slot.</p>
+        <div class="at-higher"><strong>Higher Levels:</strong> +1 target per slot above 1st.</div>
       </div>
       <div class="spell-source">Fey Touched</div>
     </div>

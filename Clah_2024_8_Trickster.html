@@ -1459,8 +1459,8 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   .h1-char { font-size: 30pt; }
   .eb-stats { grid-template-columns: repeat(2, 1fr); }
   .statblock-stats { grid-template-columns: repeat(3, 1fr); }
-  .toolbar { position: relative; top: 0; flex-wrap: wrap; }
-  .tb-title { width: 100%; border-right: none; border-bottom: 1px solid var(--rule); padding-bottom: 6px; margin-bottom: 4px; }
+  /* Hide toolbar on mobile — takes up too much space, not needed for reference use */
+  .toolbar { display: none !important; }
 }
 
 /* ============== SMALL HELPERS ============== */

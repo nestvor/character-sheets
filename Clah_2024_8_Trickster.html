@@ -1463,6 +1463,12 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   .toolbar { display: none !important; }
 }
 
+/* Hide toolbar on ANY touch device regardless of viewport width.
+   Covers iPhone landscape (812px wide) and iPad in all orientations. */
+@media (hover: none) and (pointer: coarse) {
+  .toolbar { display: none !important; }
+}
+
 /* ============== SMALL HELPERS ============== */
 .two-col { column-count: 2; column-gap: 5mm; column-rule: 1px dotted var(--rule); }
 .no-break { page-break-inside: avoid; break-inside: avoid; }

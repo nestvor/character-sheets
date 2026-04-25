@@ -827,6 +827,14 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   text-align: right;
 }
 
+/* Invisible placeholder cells in spell grids — occupy space, render nothing.
+   Used to fill out incomplete rows so the grid columns stay aligned. */
+.spell-placeholder {
+  visibility: hidden;
+  border: none !important;
+  background: none !important;
+}
+
 /* ============== FAMILIAR STAT BLOCK ============== */
 .statblock {
   border: 1.5px solid var(--ink);
@@ -1225,11 +1233,13 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   .page-portrait {
     width: 190mm !important;
     height: auto !important;
+    min-height: 0 !important;
     padding: 0 !important;
   }
   .page-landscape {
     width: 277mm !important;
     height: auto !important;
+    min-height: 0 !important;
     padding: 0 !important;
   }
 
@@ -2538,7 +2548,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
 </section>
 
 <!-- ============================================================
-     PAGE 4 — CANTRIPS SPELLBOOK  (landscape, 3×3 grid)
+     PAGE 4 — CANTRIPS SPELLBOOK  (landscape, 4 columns)
      ============================================================ -->
 <section class="page page-landscape sb-cantrip">
 
@@ -2555,7 +2565,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
     </div>
   </header>
 
-  <div class="spell-grid spell-grid-3x3" style="grid-template-rows: repeat(3, 1fr); min-height: 170mm;">
+  <div class="spell-grid" style="grid-template-columns: repeat(4, 1fr); gap: 4mm;">
 
     <!-- Eldritch Blast - SIGNATURE -->
     <div class="spell prepared">
@@ -2734,11 +2744,15 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       </div>
       <div class="spell-source">Celestial + Spellfire</div>
     </div>
+
+    <div class="spell spell-placeholder" aria-hidden="true"></div>
+    <div class="spell spell-placeholder" aria-hidden="true"></div>
+    <div class="spell spell-placeholder" aria-hidden="true"></div>
   </div>
 </section>
 
 <!-- ============================================================
-     PAGE 5 — 1ST LEVEL SPELLS  (landscape, 3×2 grid)
+     PAGE 5 — 1ST LEVEL SPELLS  (landscape, 4 columns)
      ============================================================ -->
 <section class="page page-landscape sb-lvl1">
 
@@ -2754,7 +2768,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
     </div>
   </header>
 
-  <div class="spell-grid" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); min-height: 170mm; gap: 5mm;">
+  <div class="spell-grid" style="grid-template-columns: repeat(4, 1fr); gap: 4mm;">
 
     <!-- Cure Wounds -->
     <div class="spell always-prep">
@@ -2879,11 +2893,17 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       <div class="spell-source">Cleric (prepared)</div>
     </div>
 
+    <!-- Hidden placeholder spacer -->
+    <div class="spell spell-placeholder" aria-hidden="true"></div>
+
+    <!-- Hidden placeholder spacer -->
+    <div class="spell spell-placeholder" aria-hidden="true"></div>
+
   </div>
 </section>
 
 <!-- ============================================================
-     PAGE 6 — 2ND LEVEL SPELLS  (landscape, 4×3 grid)
+     PAGE 6 — 2ND LEVEL SPELLS  (landscape, 4 columns)
      ============================================================ -->
 <section class="page page-landscape sb-lvl2">
 
@@ -2899,7 +2919,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
     </div>
   </header>
 
-  <div class="spell-grid" style="grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); min-height: 172mm; gap: 3mm;">
+  <div class="spell-grid" style="grid-template-columns: repeat(4, 1fr); gap: 4mm;">
 
     <!-- Darkness -->
     <div class="spell prepared">
@@ -3161,7 +3181,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
     </div>
   </header>
 
-  <div class="spell-grid" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); min-height: 170mm; gap: 5mm;">
+  <div class="spell-grid" style="grid-template-columns: repeat(4, 1fr); gap: 4mm;">
 
     <!-- Dispel Magic -->
     <div class="spell prepared">
@@ -3283,13 +3303,8 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       <div class="spell-source">Warlock (prepared)</div>
     </div>
 
-    <!-- Empty 6th cell -->
-    <div class="spell" style="border-style: dashed; opacity: 0.35; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8mm;">
-      <div style="font-family: 'Fraunces', serif; font-style: italic; color: var(--ink-muted); font-size: 10pt;">
-        <div style="font-size: 26pt; color: var(--gold); opacity: 0.5;">✦</div>
-        <div style="margin-top: 3mm;">room for a<br>future warlock<br>prepared spell</div>
-      </div>
-    </div>
+    <div class="spell spell-placeholder" aria-hidden="true"></div>
+    <div class="spell spell-placeholder" aria-hidden="true"></div>
   </div>
 </section>
 

@@ -1512,8 +1512,8 @@ em.soft { color: var(--ink-muted); font-style: italic; }
     width: auto !important;
     min-width: 0 !important;
   }
-  /* First column (Skills) — wider proportional share */
-  .main-cols > div:nth-child(1) { flex: 1.5 1 0 !important; }
+  /* First column (Skills) — single-column skill rows, modest width */
+  .main-cols > div:nth-child(1) { flex: 1.2 1 0 !important; }
   /* Middle column (Combat) — densest info, gets most width */
   .main-cols > div:nth-child(2) { flex: 1.8 1 0 !important; }
   /* Third column (Resources) — narrowest */
@@ -1601,8 +1601,9 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   /* Abilities row stays 6-wide — they're already small */
   .abilities-row { grid-template-columns: repeat(6, 1fr) !important; }
 
-  /* Skills back to 2 columns since 1 col would scroll forever */
-  .skills-list { grid-template-columns: repeat(2, 1fr) !important; }
+  /* Skills column: respect the inline 1fr from page 1 (single skill per row).
+     Was being overridden by a 2-col rule, doubling the column width needed. */
+  .skills-list { grid-template-columns: 1fr !important; }
 
   /* Combat grid — keep 2 cols since cards are wide */
   .combat-grid { grid-template-columns: repeat(2, 1fr) !important; }

@@ -1495,6 +1495,23 @@ em.soft { color: var(--ink-muted); font-style: italic; }
     background: var(--paper) !important;
     padding: 0 !important;
     font-size: 14px;
+    /* iOS Safari boosts text in wide blocks unevenly — disable for consistent sizing */
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+  }
+
+  /* Stack flex column layouts vertically on phone — fixed widths in inline styles
+     (e.g. width: 55mm on Skills) cause overlap on narrow screens. */
+  .main-cols {
+    flex-direction: column !important;
+    gap: 8px !important;
+    align-items: stretch !important;
+  }
+  .main-cols > div {
+    width: 100% !important;
+    max-width: none !important;
+    flex: none !important;
+    min-width: 0 !important;
   }
 
   /* Pages become continuous flowing content rather than fixed-size sheets */

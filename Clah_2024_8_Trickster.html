@@ -1451,8 +1451,8 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   input { border: none !important; background: transparent !important; }
 }
 
-/* ============== RESPONSIVE (mobile) ============== */
-@media screen and (max-width: 750px) {
+/* ============== RESPONSIVE (mobile portrait — narrow viewport) ============== */
+@media screen and (max-width: 700px) {
   body { padding: 10px 4px 40px; font-size: 11pt; }
   .page {
     width: 100%;
@@ -1477,6 +1477,117 @@ em.soft { color: var(--ink-muted); font-style: italic; }
    Covers iPhone landscape (812px wide) and iPad in all orientations. */
 @media (hover: none) and (pointer: coarse) {
   .toolbar { display: none !important; }
+}
+
+/* ============== PHONE LANDSCAPE (iPhone 12-class, 700-950px wide, short height)
+   Optimizes for using the spellbook as a quick-reference on a phone in landscape.
+   Targets the 844x390 (iPhone 12) viewport and similar.
+   Strategy:
+   - Compact page chrome (header, kente band) to claw back vertical space
+   - Spell cards in 2-column layout for readability (3-4 cols too cramped at this size)
+   - Larger body text so it's actually readable without zooming
+   - Hide placeholder cells entirely (no need to align rows on a scrolling phone)
+   - Each spell page becomes a vertically-scrolling section
+   - Tracker page hidden — only used in print
+   ============== */
+@media screen and (min-width: 700px) and (max-width: 950px) and (max-height: 500px) and (orientation: landscape) {
+  body {
+    background: var(--paper) !important;
+    padding: 0 !important;
+    font-size: 14px;
+  }
+
+  /* Pages become continuous flowing content rather than fixed-size sheets */
+  .page {
+    width: 100% !important;
+    min-height: auto !important;
+    max-width: none !important;
+    padding: 6px 10px 14px !important;
+    margin: 0 0 12px 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Compact page header — kill huge title sizes */
+  .kente-band { height: 4px !important; margin-bottom: 6px !important; }
+  .page-head { padding-bottom: 4px !important; margin-bottom: 6px !important; }
+  .h1-char {
+    font-size: 18pt !important;
+    line-height: 1.1 !important;
+  }
+  .h1-char svg.adinkra { width: 18px !important; height: 18px !important; }
+  .char-sub { font-size: 9.5pt !important; line-height: 1.3 !important; }
+  .page-num { font-size: 8pt !important; }
+
+  /* Spell grids — 2 columns on phone (more readable than 4) */
+  .spell-grid,
+  [class*="spell-grid"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: none !important;
+    gap: 8px !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  /* Hide invisible placeholders entirely — no row-alignment needed when scrolling */
+  .spell-placeholder { display: none !important; }
+
+  /* Spell cards — bigger touch targets, readable text */
+  .spell {
+    padding: 8px 10px !important;
+    border-radius: 6px !important;
+  }
+  .spell-name { font-size: 13pt !important; line-height: 1.2 !important; }
+  .spell-level { font-size: 8pt !important; }
+  .spell-stats {
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
+    grid-template-columns: auto 1fr !important;
+    gap: 1px 8px !important;
+    margin-bottom: 4px !important;
+  }
+  .spell-stats dt { font-size: 7.5pt !important; }
+  .spell-body {
+    font-size: 10pt !important;
+    line-height: 1.45 !important;
+  }
+  .spell-body .at-higher { font-size: 9pt !important; }
+  .spell-source { font-size: 7pt !important; }
+
+  /* Keep the spell-stats inline conversion from the (hover:none) block applied here too */
+
+  /* Hide tracker page on phone — only relevant for print */
+  .tracker-page { display: none !important; }
+
+  /* Hide the ornament legend/key on page 1 — saves vertical space */
+  .ornament-legend { display: none !important; }
+
+  /* Statblock compaction so Lousy fits without tons of scrolling */
+  .statblock { padding: 8px 12px !important; }
+  .statblock-stats { gap: 4px !important; }
+  .statblock-stat .val { font-size: 14pt !important; }
+
+  /* Compact features and cards on character/equipment pages */
+  .feature, .card { padding: 6px 10px !important; }
+  .feature-name { font-size: 11pt !important; }
+  .feature-body { font-size: 9.5pt !important; line-height: 1.4 !important; }
+
+  /* Mobile-friendly EB callout */
+  .eb-stats { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Abilities row stays 6-wide — they're already small */
+  .abilities-row { grid-template-columns: repeat(6, 1fr) !important; }
+
+  /* Skills back to 2 columns since 1 col would scroll forever */
+  .skills-list { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Combat grid — keep 2 cols since cards are wide */
+  .combat-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Features grid 2 columns */
+  .features-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .feature.wide { grid-column: span 2 !important; }
 }
 
 /* ============== SMALL HELPERS ============== */

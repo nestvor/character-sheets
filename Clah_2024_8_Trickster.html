@@ -1502,22 +1502,22 @@ em.soft { color: var(--ink-muted); font-style: italic; }
 
   /* Preserve the original 3-col flow (Skills | Combat | Resources) on phone.
      Convert fixed-mm widths to proportional flex so columns scale with viewport
-     instead of overlapping when their content exceeds the inline widths. */
+     instead of overlapping when their content exceeds the inline widths.
+     Skills needs more room than its mm width to fit "Sleight of Hand" etc. without truncation. */
   .main-cols {
     gap: 6px !important;
     align-items: flex-start !important;
   }
   .main-cols > div[style*="width:"] {
-    /* Override the inline mm widths — let columns share space proportionally */
     width: auto !important;
-    flex: 1 1 0 !important;
     min-width: 0 !important;
   }
-  .main-cols > div[style*="flex: 1"] {
-    /* Middle (Combat) gets a slightly larger share since it has the densest info */
-    flex: 1.4 1 0 !important;
-    min-width: 0 !important;
-  }
+  /* First column (Skills) — wider proportional share */
+  .main-cols > div:nth-child(1) { flex: 1.5 1 0 !important; }
+  /* Middle column (Combat) — densest info, gets most width */
+  .main-cols > div:nth-child(2) { flex: 1.8 1 0 !important; }
+  /* Third column (Resources) — narrowest */
+  .main-cols > div:nth-child(3) { flex: 1 1 0 !important; min-width: 0 !important; }
 
   /* Pages become continuous flowing content rather than fixed-size sheets */
   .page {

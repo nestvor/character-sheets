@@ -1889,16 +1889,16 @@ em.soft { color: var(--ink-muted); font-style: italic; }
             </td>
           </tr>
           <tr>
-            <td class="w-name"><svg class="adinkra" style="width:10px;height:10px;color:var(--gold);vertical-align:-1px;"><use href="#geo-diamond"/></svg> Lousy · Rend</td>
+            <td class="w-name"><svg class="adinkra" style="width:10px;height:10px;color:var(--gold);vertical-align:-1px;"><use href="#geo-diamond"/></svg> Lousy · Sting <span class="muted">(imp form)</span></td>
             <td class="w-atk">+5</td>
-            <td class="w-dmg"><strong>1d4+3</strong> slash <span class="gold">+ 2d6 rad</span></td>
-            <td class="muted">Reaction via <strong>your Attack action, forgo one attack</strong> · radiant damage type (useful vs undead)</td>
+            <td class="w-dmg"><strong>1d6+3</strong> pierce <span class="gold">+ 2d6 poison</span></td>
+            <td class="muted">Reaction via <strong>your Attack action, forgo one attack</strong> · poison auto-applies, no save (2024)</td>
           </tr>
           <tr>
-            <td class="w-name">Lousy · Burst of Ingenuity <span class="muted">(Reaction)</span></td>
-            <td class="w-atk" style="color:var(--gold);">2/day</td>
-            <td class="w-dmg"><strong>+2</strong> to roll</td>
-            <td class="muted">Lousy or any creature within 30 ft · after an ability check or saving throw</td>
+            <td class="w-name">Lousy · Invisibility <span class="muted">(utility)</span></td>
+            <td class="w-atk" style="color:var(--gold);">at-will</td>
+            <td class="w-dmg">—</td>
+            <td class="muted">Innate, no components, CHA-based · ends if Lousy attacks · pair with Help action for advantage on EB</td>
           </tr>
           <tr>
             <td class="w-name">Sacred Flame <span class="muted">(cantrip)</span></td>
@@ -2255,13 +2255,13 @@ em.soft { color: var(--ink-muted); font-style: italic; }
 
     <div class="feature wide highlight">
       <div class="feature-head">
-        <span class="feature-name">Pact of the Chain · Lousy the Sphinx</span>
+        <span class="feature-name">Pact of the Chain · Lousy</span>
         <span class="feature-source">Pact Boon</span>
       </div>
       <div class="feature-body">
-        <p>Your familiar <em>Lousy</em> — a <strong>Sphinx of Wonder</strong> — is bound to you. You learn <em>Find Familiar</em> and can cast it as a ritual. See full statblock on page 3.</p>
+        <p>Your familiar <em>Lousy</em> — a willful celestial spirit who appears as a cat — is bound to you. You learn <em>Find Familiar</em> and can cast it as a ritual.</p>
         <p><strong>Familiar attack via your turn.</strong> When you take the <em>Attack</em> action, you can forgo one of your own attacks so Lousy can make <strong>one attack of his own</strong> as a Reaction.</p>
-        <p style="font-size: 8.5pt; color: var(--ink-muted); font-style: italic; border-top: 1px dotted var(--rule-soft); padding-top: 1.5mm; margin-top: 1.5mm;">Rend is a solid attack (+5, avg 12 damage incl. radiant), but Clah casting <em>Eldritch Blast</em> as his action is almost always a better use of the turn. Lousy's real value is intelligence: flying scout, radiant-resistant tank, Burst of Ingenuity party assists, and eyes for Invoke Duplicity ranged casting.</p>
+        <p style="font-size: 8.5pt; color: var(--ink-muted); font-style: italic; border-top: 1px dotted var(--rule-soft); padding-top: 1.5mm; margin-top: 1.5mm;"><strong>The spirit, not the form.</strong> Lousy is a celestial spirit. The Find Familiar spell summons him into a body — that body's stat block is what's listed on page 3. He typically manifests as the <strong>Imp form</strong> (cat-shaped, with celestial sparkle in his eyes), but on re-summoning Clah can ask the Star to send him in any Pact of the Chain form: <em>Sphinx of Wonder</em> for big set-pieces, <em>Octopus</em> underwater, regular cat for taverns. Personality and name persist across forms; only the body's stat block changes.</p>
       </div>
     </div>
 
@@ -2368,7 +2368,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   <header class="page-head">
     <div class="page-head-left">
       <h1 class="h1-char" style="font-size: 32pt;"><svg class="adinkra" style="width:28px;height:28px;color:var(--gold);margin-right:8px;vertical-align:-3px;"><use href="#geo-diamond"/></svg>Gear <em>& Companions</em></h1>
-      <div class="char-sub">Equipment · magic items · Lousy the Sphinx</div>
+      <div class="char-sub">Equipment · magic items · Lousy</div>
     </div>
     <div class="page-head-right">
       <div class="page-num">Page <strong>3</strong> / 7</div>
@@ -2424,7 +2424,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
             <li>Spells you cast <strong>ignore resistance to radiant and necrotic</strong> damage.</li>
             <li><strong>1 / Short Rest:</strong> when a creature would make a saving throw against a spell you cast, impose <strong>disadvantage</strong> on <em>every creature</em> making that save — not just one target. AoE spells get the full effect.</li>
           </ul>
-          <p class="muted mt-1" style="font-size: 8pt;"><em>Radiant spells that bypass resistance: Sacred Flame, Guiding Bolt, Word of Radiance, True Strike's bonus die. Note: Lousy's Rend is not affected — Orb applies only to spells Clah casts.</em></p>
+          <p class="muted mt-1" style="font-size: 8pt;"><em>Radiant spells that bypass resistance: Sacred Flame, Guiding Bolt, Word of Radiance, True Strike's bonus die. Note: Lousy's Sting is not affected — Orb applies only to spells Clah casts.</em></p>
         </div>
       </div>
 
@@ -2477,49 +2477,55 @@ em.soft { color: var(--ink-muted); font-style: italic; }
 
       <div class="statblock mb-2">
         <div class="statblock-head">
-          <div class="statblock-name">Lousy <span class="muted" style="font-size:10pt; font-weight: 400;">· Sphinx of Wonder</span></div>
-          <div class="statblock-type">Tiny celestial, lawful good · CR 1 · 2024 Monster Manual p. 291 · <em>a willful cat</em></div>
+          <div class="statblock-name">Lousy <span class="muted" style="font-size:10pt; font-weight: 400;">· Imp form</span></div>
+          <div class="statblock-type">Tiny fiend (devil) · CR 1 · 2024 Monster Manual · <em>celestial spirit in a fiend's body — appears as a willful cat</em></div>
         </div>
 
-        <div class="statblock-line"><strong>AC</strong> 13 &nbsp;·&nbsp; <strong>Initiative</strong> +3 (13) &nbsp;·&nbsp; <strong>HP</strong> 24 (7d4 + 7) &nbsp;·&nbsp; <strong>Speed</strong> 20 ft., fly 40 ft.</div>
+        <div class="statblock-line"><strong>AC</strong> 13 &nbsp;·&nbsp; <strong>Initiative</strong> +3 (13) &nbsp;·&nbsp; <strong>HP</strong> 21 (6d4 + 6) &nbsp;·&nbsp; <strong>Speed</strong> 20 ft., fly 40 ft.</div>
 
         <div class="statblock-stats">
           <div class="statblock-stat"><div class="label">STR</div><div class="val">6</div><div class="sub">−2 / −2</div></div>
           <div class="statblock-stat"><div class="label">DEX</div><div class="val">17</div><div class="sub">+3 / +3</div></div>
           <div class="statblock-stat"><div class="label">CON</div><div class="val">13</div><div class="sub">+1 / +1</div></div>
-          <div class="statblock-stat"><div class="label">INT</div><div class="val">15</div><div class="sub">+2 / +2</div></div>
+          <div class="statblock-stat"><div class="label">INT</div><div class="val">11</div><div class="sub">+0 / +0</div></div>
           <div class="statblock-stat"><div class="label">WIS</div><div class="val">12</div><div class="sub">+1 / +1</div></div>
-          <div class="statblock-stat"><div class="label">CHA</div><div class="val">11</div><div class="sub">+0 / +0</div></div>
+          <div class="statblock-stat"><div class="label">CHA</div><div class="val">14</div><div class="sub">+2 / +2</div></div>
         </div>
 
-        <div class="statblock-line"><strong>Skills</strong> Arcana +4, Religion +4, Stealth +5</div>
-        <div class="statblock-line"><strong>Resistances</strong> necrotic, psychic, radiant</div>
-        <div class="statblock-line"><strong>Senses</strong> darkvision 60 ft.; passive Perception <strong>11</strong></div>
-        <div class="statblock-line"><strong>Languages</strong> Celestial, Common</div>
+        <div class="statblock-line"><strong>Skills</strong> Deception +4, Insight +3, Persuasion +4, Stealth +5</div>
+        <div class="statblock-line"><strong>Resistances</strong> cold &nbsp;·&nbsp; <strong>Immunities</strong> fire, poison; the Poisoned condition</div>
+        <div class="statblock-line"><strong>Senses</strong> darkvision 120 ft.; passive Perception <strong>11</strong></div>
+        <div class="statblock-line"><strong>Languages</strong> Celestial, Common, Infernal</div>
 
         <h4>Traits</h4>
+        <div class="statblock-line"><strong>Devil's Sight.</strong> Magical Darkness doesn't impede Lousy's Darkvision.</div>
         <div class="statblock-line"><strong>Magic Resistance.</strong> Advantage on saving throws against spells and other magical effects.</div>
 
         <h4>Actions</h4>
         <div class="statblock-line">
-          <strong><em>Rend.</em></strong> <em>Melee Attack Roll:</em> <strong>+5</strong>, reach 5 ft. <strong>Hit:</strong> 5 (1d4 + 3) slashing damage <span class="gold">plus 7 (2d6) radiant damage</span>.
+          <strong><em>Sting.</em></strong> <em>Melee Attack Roll:</em> <strong>+5</strong>, reach 5 ft. <strong>Hit:</strong> 6 (1d6 + 3) piercing damage <span class="gold">plus 7 (2d6) poison damage</span>. <em class="muted" style="font-size:8pt;">2024: poison auto-applies, no save.</em>
         </div>
-
-        <h4>Reactions</h4>
         <div class="statblock-line" style="padding: 2mm 3mm; background: var(--gold-wash); border-left: 2px solid var(--gold); margin-top: 1.5mm;">
-          <strong><em>Burst of Ingenuity (2/Day).</em></strong> <strong>Trigger:</strong> Lousy or another creature within 30 ft makes an ability check or saving throw. <strong>Response:</strong> Lousy adds <strong>+2</strong> to the roll.
+          <strong><em>Invisibility.</em></strong> Lousy casts <em>Invisibility</em> on himself, requiring no spell components and using <strong>Charisma</strong> as the spellcasting ability. Concentration; ends if he attacks or casts another spell.
           <div style="margin-top: 1.5mm; padding-top: 1.5mm; border-top: 1px dotted var(--rule); font-size: 8.5pt;">
-            <strong class="gold">Party utility.</strong> Lousy can retroactively push a party member's ability check or save past a DC. Twice per day. Keep him close in clutch moments.
+            <strong class="gold">At-will, free.</strong> Lousy can stay invisible essentially permanently. Drops invisibility only when he attacks. Pair with <strong>Help action</strong> for advantage on Clah's Eldritch Blast beam without breaking the cloak.
           </div>
+        </div>
+        <div class="statblock-line">
+          <strong><em>Shape-Shift.</em></strong> Lousy shape-shifts to resemble a rat (Speed 20), a raven (Speed 20, fly 60), or a spider (Speed 20, climb 20), or returns to true form. Stats unchanged except Speed.
+          <div class="muted" style="font-size: 8pt; font-style: italic; margin-top: 1mm;">Reskin: small mousing cat / flying spirit-cat / climbing cat that gets into impossibly small spaces.</div>
         </div>
 
         <h4>Using Your Familiar</h4>
-        <div class="statblock-line"><strong>Attack via Pact of the Chain.</strong> On your turn, when you take the Attack action, forgo one of your own attacks; Lousy can then use his <strong>Reaction</strong> to Rend (+5, 1d4+3 slashing + 2d6 radiant — a solid hit). Situational, since casting Eldritch Blast is usually the stronger action.</div>
-        <div class="statblock-line"><strong>Share Senses (your BA)</strong> — see/hear through Lousy until start of next turn; you are Blind/Deaf to your own senses. Darkvision 60 only — <em>no blindsight</em>.</div>
-        <div class="statblock-line"><strong>Help action</strong> — Lousy can take Help on his own turn. Combined with <strong>Invisibility</strong> cast on him, he grants advantage on one Eldritch Blast beam per round safely.</div>
-        <div class="statblock-line"><strong>Radiant damage type.</strong> Rend's 2d6 radiant is a great type against undead and fiends. <em>Note:</em> Glimmering Orb only bypasses resistance for spells <em>Clah</em> casts — Lousy's attacks are unaffected by the Orb.</div>
+        <div class="statblock-line"><strong>Attack via Pact of the Chain.</strong> On your turn, when you take the Attack action, forgo one of your own attacks; Lousy can then use his <strong>Reaction</strong> to Sting (+5, 1d6+3 piercing + 2d6 poison auto). Situational — Eldritch Blast is usually stronger.</div>
+        <div class="statblock-line"><strong>Share Senses + Devil's Sight.</strong> Bonus Action to see through Lousy. Combined with his <strong>Devil's Sight + 120 ft darkvision</strong>, Clah can see through magical darkness — including from his own <em>Hunger of Hadar</em>.</div>
+        <div class="statblock-line"><strong>Permanent Invisible Scout.</strong> Send Lousy invisible into any area; Share Senses to perceive what he sees. Drop invisibility only to deliver a Sting or Help.</div>
+        <div class="statblock-line"><strong>Invisible + Help action.</strong> Lousy stays invisible while taking the Help action — granting advantage on one Eldritch Blast beam per round without exposing himself.</div>
         <div class="statblock-line"><strong>Keep within 100 ft</strong> — telepathy (Find Familiar) + max heal dice on yourself (Gift of Ever-Living Ones).</div>
         <div class="statblock-line" style="font-size: 8pt; color: var(--ink-muted); font-style: italic; margin-top: 1.5mm; padding-top: 1.5mm; border-top: 1px dotted var(--rule);">
+          <strong>The spirit, not the form.</strong> Lousy is a celestial spirit — body type for spell-interaction purposes (Banishment, Detect Evil and Good, etc.) is the form's type, but the spirit himself is celestial. On re-summoning, Clah can request other Pact of the Chain forms: <em>Sphinx of Wonder</em> for Burst of Ingenuity utility, <em>Sprite</em> for Heart Sight social use, <em>Pseudodragon</em> for blindsight 10 ft, or any standard Find Familiar form (octopus underwater, owl at night, regular cat in town). Personality and name persist; only the body's stat block changes.
+        </div>
+        <div class="statblock-line" style="font-size: 8pt; color: var(--ink-muted); font-style: italic;">
           <strong>On the name.</strong> "Lousy" because most of the time he acts like a regular cat — willful, napping, ignoring commands. A familiar that ignores you is, well, a lousy familiar. Clah loves him anyway.
         </div>
       </div>
@@ -3408,7 +3414,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       <!-- LOUSY -->
       <div class="section-head mt-3">
         <svg class="adinkra"><use href="#adk-gye-nyame"/></svg>
-        <div class="h2">Lousy <span class="muted" style="font-size:8pt; font-weight:400;">· sphinx familiar</span></div>
+        <div class="h2">Lousy <span class="muted" style="font-size:8pt; font-weight:400;">· imp form</span></div>
         <div class="rule-gold"></div>
       </div>
 
@@ -3419,19 +3425,19 @@ em.soft { color: var(--ink-muted); font-style: italic; }
             <div class="tracker-box tracker-box-lg"></div>
           </div>
           <div>
-            <div class="tracker-label">Max HP <span class="muted" style="font-size:7pt;">(24)</span></div>
+            <div class="tracker-label">Max HP <span class="muted" style="font-size:7pt;">(21)</span></div>
             <div class="tracker-box tracker-box-lg">
-              <span class="muted" style="font-size:11pt; color:var(--ink-faint);">24</span>
+              <span class="muted" style="font-size:11pt; color:var(--ink-faint);">21</span>
             </div>
           </div>
         </div>
         <div class="tracker-row-lg">
-          <span class="tracker-label-inline">Burst of Ingenuity <span class="muted">· +2 / day</span></span>
-          <span class="big-bubble gold"></span><span class="big-bubble gold"></span>
+          <span class="tracker-label-inline">Invisible? <span class="muted" style="font-size:7.5pt;">at-will, ends on attack</span></span>
+          <span class="big-bubble gold"></span>
         </div>
         <div class="tracker-row-lg">
-          <span class="tracker-label-inline">Status</span>
-          <span style="font-size: 8pt; color: var(--ink-muted); font-style: italic;">KO'd? Re-summon with ritual (10 min)</span>
+          <span class="tracker-label-inline">Form / Status</span>
+          <span style="font-size: 7.5pt; color: var(--ink-muted); font-style: italic;">Imp default · KO'd → 10-min ritual</span>
         </div>
       </div>
     </div>

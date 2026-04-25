@@ -1885,7 +1885,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
           </tr>
           <tr style="background: var(--gold-wash);">
             <td class="w-name" colspan="4" style="font-size:8pt; padding: 1mm 2mm; color: var(--ink-muted); font-style: italic; border-bottom-color: var(--rule);">
-              <strong class="gold">On hit riders:</strong> Hex adds <strong>+1d6 necrotic</strong> per hit · Glimmering Orb ignores <strong>radiant &amp; necrotic resistance</strong> — so declare radiant damage type on True Strike to maximize
+              <strong class="gold">On hit riders:</strong> Glimmering Orb ignores <strong>radiant &amp; necrotic resistance</strong> — declare radiant on True Strike. <strong>Mind Sliver</strong> sets up −1d4 to next save (combos with Hypnotic Pattern, Hold Person, Suggestion, Command).
             </td>
           </tr>
           <tr>
@@ -1943,7 +1943,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
           </div>
         </div>
         <div class="eb-body">
-          <strong>Force damage.</strong> Two beams, each fired at one target within range; target hit is <strong>pushed 10 ft</strong> straight away (Repelling Blast). With <strong>Hex</strong> up, add <strong>+1d6 necrotic</strong> per hit (Glimmering Orb bypasses resistance).
+          <strong>Force damage.</strong> <strong>2 beams</strong> at level 8 (each beam = one attack), at any targets in range; target hit is <strong>pushed 10 ft</strong> straight away (Repelling Blast). +CHA per beam (Agonizing Blast).
         </div>
       </div>
     </div>
@@ -2017,7 +2017,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
             <span class="bubble" data-b="cd1"></span>
           </div>
         </div>
-        <div class="tracker-meta mt-1" style="font-size:7pt;">Divine Spark · Invoke Duplicity</div>
+        <div class="tracker-meta mt-1" style="font-size:7pt;">Divine Spark · Turn Undead · Invoke Duplicity</div>
       </div>
 
       <!-- Once-per-short-rest -->
@@ -2029,14 +2029,6 @@ em.soft { color: var(--ink-muted); font-style: italic; }
             <span class="bubble" data-b="tr0"></span>
             <span class="bubble" data-b="tr1"></span>
             <span class="bubble" data-b="tr2"></span>
-          </div>
-        </div>
-        <div class="tracker-row" style="padding: 0.3mm 0;">
-          <span class="tracker-meta">Blessing · Tr.</span>
-          <div class="bubbles" data-group="bt">
-            <span class="bubble" data-b="bt0"></span>
-            <span class="bubble" data-b="bt1"></span>
-            <span class="bubble" data-b="bt2"></span>
           </div>
         </div>
         <div class="tracker-row" style="padding: 0.3mm 0;">
@@ -2309,15 +2301,24 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       </div>
     </div>
 
-    <div class="feature">
+    <div class="feature wide">
       <div class="feature-head">
         <span class="feature-name">Channel Divinity</span>
         <span class="feature-source">Cleric 2</span>
       </div>
       <div class="feature-body">
-        <p><strong>2 uses</strong> per Short or Long Rest. Two options available:</p>
-        <p><strong>Divine Spark.</strong> <em>Magic action.</em> Point at target within 60 ft and roll <strong>2d8 + WIS</strong>. Choose radiant or necrotic damage (CON save halves) OR heal for that amount.</p>
-        <p><strong>Invoke Duplicity</strong> — see Trickery domain.</p>
+        <p><strong>2 uses</strong> per Short or Long Rest. <strong>Save DC 12</strong> (WIS-based).</p>
+
+        <p><strong>Divine Spark.</strong> <em>Magic action.</em> Point holy symbol at a creature within <strong>30 ft</strong>. Roll <strong>1d8 + WIS</strong>. Either:</p>
+        <ul style="margin: 1mm 0 0 4mm;">
+          <li><strong>Heal</strong> the target for that total, or</li>
+          <li>Force a <strong>CON save</strong> — failed = take that total in <strong>radiant or necrotic</strong> damage (your choice); successful = half damage.</li>
+        </ul>
+        <p style="font-size: 8pt; color: var(--ink-muted); font-style: italic; margin-top: 1mm;">Scales: 2d8 at level 7, 3d8 at 13, 4d8 at 18.</p>
+
+        <p style="margin-top: 2mm;"><strong>Turn Undead.</strong> <em>Magic action.</em> Present holy symbol; each Undead of your choice within <strong>30 ft</strong> makes a <strong>WIS save</strong>. Failed = <strong>Frightened &amp; Incapacitated for 1 minute</strong>; spends turns moving as far from you as possible. Ends early if it takes any damage, or if you're Incapacitated, or you die.</p>
+
+        <p style="margin-top: 2mm;"><strong>Invoke Duplicity.</strong> Trickery option — see card below.</p>
       </div>
     </div>
 
@@ -2338,8 +2339,9 @@ em.soft { color: var(--ink-muted); font-style: italic; }
         <span class="feature-source">Trickery · Cleric 3</span>
       </div>
       <div class="feature-body">
-        <p><strong>Magic action.</strong> Touch a willing creature other than yourself to give them <strong>advantage on Stealth checks</strong> for <strong>1 hour</strong> or until you use this again.</p>
-        <p>Use <strong>3 times per Long Rest</strong> (= Proficiency Bonus).</p>
+        <p><strong>Magic action.</strong> Choose yourself or a willing creature within <strong>30 ft</strong> to have <strong>advantage on Dexterity (Stealth) checks</strong>.</p>
+        <p>Lasts until you finish a <strong>Long Rest</strong> or you use this feature again. <strong>No daily-use limit</strong> — just one creature blessed at a time.</p>
+        <p style="font-size: 8.5pt; color: var(--ink-muted); font-style: italic; margin-top: 1.5mm;">Cast on yourself in the morning by default — combined with Stealth proficiency (+5) you'll routinely roll 23+ to Hide.</p>
       </div>
     </div>
 
@@ -2569,26 +2571,28 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       </dl>
       <div class="spell-body">
         <p>A beam of crackling force streaks toward a creature within range. Make a ranged spell attack. <strong>Hit: 1d10 force damage</strong>.</p>
-        <p><strong>At char. lvl 5+:</strong> two beams, either same or different targets. Clah fires <strong>2 beams</strong>.</p>
-        <p class="gold" style="font-size:8pt; margin-top:1mm;"><strong>+ Agonizing:</strong> add +4 CHA per beam<br><strong>+ Repelling:</strong> push 10 ft per beam<br><strong>+ Hex:</strong> +1d6 necrotic per beam</p>
+        <p><strong>At char. lvl 5+:</strong> two beams, either same or different targets. Clah fires <strong>2 beams</strong> at level 8.</p>
+        <p class="gold" style="font-size:8pt; margin-top:1mm;"><strong>+ Agonizing:</strong> add +4 CHA per beam<br><strong>+ Repelling:</strong> push 10 ft per beam<br><strong>+ Mind Sliver setup:</strong> cast prior round → −1d4 to a follow-up save</p>
       </div>
       <div class="spell-source">Warlock</div>
     </div>
 
-    <!-- Blade Ward -->
+    <!-- Mind Sliver -->
     <div class="spell prepared">
       <div class="spell-head">
-        <div class="spell-name">Blade Ward</div>
-        <div class="spell-level">Cantrip · Abjuration</div>
+        <div class="spell-name">Mind Sliver <span class="gold" style="font-size:8pt;">★</span></div>
+        <div class="spell-level">Cantrip · Enchantment</div>
       </div>
       <dl class="spell-stats">
         <dt>Cast</dt><dd>Action</dd>
-        <dt>Range</dt><dd>Self</dd>
-        <dt>Comp</dt><dd>V, S</dd>
+        <dt>Range</dt><dd>60 ft</dd>
+        <dt>Comp</dt><dd>V</dd>
         <dt>Dur</dt><dd>1 round</dd>
       </dl>
       <div class="spell-body">
-        <p>You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have <strong>Resistance to bludgeoning, piercing, and slashing damage</strong> dealt by weapon attacks.</p>
+        <p>One creature you can see makes an <strong>INT save</strong>. Failed = <strong>2d6 psychic</strong> damage AND target subtracts <strong>1d4</strong> from the <em>next saving throw</em> it makes before the end of your next turn.</p>
+        <p class="gold" style="font-size:8pt; margin-top:1mm;"><strong>★ Setup combo:</strong> Mind Sliver (INT save) → next round Hypnotic Pattern / Hold Person / Suggestion / Command + <strong>Glimmering Orb disadvantage</strong>. Save penalties stack: target rolls WIS save with disadvantage AND −1d4. Near-guaranteed lock.</p>
+        <div class="at-higher"><strong>Cantrip scale:</strong> 1d6 → 2d6 (5) → 3d6 (11) → 4d6 (17). <em>Clah at level 8 = 2d6.</em></div>
       </div>
       <div class="spell-source">Warlock</div>
     </div>
@@ -2734,7 +2738,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
 </section>
 
 <!-- ============================================================
-     PAGE 5 — 1ST LEVEL SPELLS  (landscape, 4×2 grid)
+     PAGE 5 — 1ST LEVEL SPELLS  (landscape, 3×2 grid)
      ============================================================ -->
 <section class="page page-landscape sb-lvl1">
 
@@ -2743,14 +2747,14 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   <header class="page-head">
     <div class="page-head-left">
       <h1 class="h1-char" style="font-size: 30pt;"><svg class="adinkra" style="width:26px;height:26px;color:var(--gold);margin-right:8px;vertical-align:-3px;"><use href="#adk-nyansapo"/></svg>1<sup style="font-size:20pt;">st</sup> Level Spells</h1>
-      <div class="char-sub"><strong>8 spells</strong> · Cleric slots <span class="bold">4 ×</span> · Warlock casts at 3rd (Pact Magic)</div>
+      <div class="char-sub"><strong>6 spells</strong> · Cleric slots <span class="bold">4 ×</span> · Warlock casts at 3rd (Pact Magic)</div>
     </div>
     <div class="page-head-right">
       <div class="page-num">Spellbook · Page <strong>5</strong> / 7</div>
     </div>
   </header>
 
-  <div class="spell-grid" style="grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); min-height: 170mm;">
+  <div class="spell-grid" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); min-height: 170mm; gap: 5mm;">
 
     <!-- Cure Wounds -->
     <div class="spell always-prep">
@@ -2875,44 +2879,6 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       <div class="spell-source">Cleric (prepared)</div>
     </div>
 
-    <!-- Hex -->
-    <div class="spell prepared">
-      <div class="spell-head">
-        <div class="spell-name">Hex <span class="gold" style="font-size:8pt;">★</span></div>
-        <div class="spell-level">1st · Enchantment <span class="concentration">◉ conc.</span></div>
-      </div>
-      <dl class="spell-stats">
-        <dt>Cast</dt><dd>Bonus Action</dd>
-        <dt>Range</dt><dd>90 ft</dd>
-        <dt>Comp</dt><dd>V, S, M (eye of newt)</dd>
-        <dt>Dur</dt><dd>Conc. up to 1 hr</dd>
-      </dl>
-      <div class="spell-body">
-        <p>Place a curse on a creature within range. Whenever <strong>you hit</strong> the target with an attack, it takes <strong>+1d6 necrotic damage</strong> (Glimmering Orb ignores resistance). Choose one ability; target has <strong>Disadvantage on ability checks</strong> with that ability.</p>
-        <p>If target drops to 0 HP before spell ends, use a <strong>Bonus Action</strong> on a later turn to re-apply Hex to a new creature.</p>
-        <div class="at-higher"><strong>Higher Levels:</strong> 3rd-4th = up to 8 hrs; 5th+ = up to 24 hrs. <em>Clah casts at 3rd → 8 hr concentration.</em></div>
-      </div>
-      <div class="spell-source">Warlock (prepared)</div>
-    </div>
-
-    <!-- Armor of Agathys -->
-    <div class="spell prepared">
-      <div class="spell-head">
-        <div class="spell-name">Armor of Agathys</div>
-        <div class="spell-level">1st · Abjuration</div>
-      </div>
-      <dl class="spell-stats">
-        <dt>Cast</dt><dd>Action</dd>
-        <dt>Range</dt><dd>Self</dd>
-        <dt>Comp</dt><dd>V, S, M (cup of water)</dd>
-        <dt>Dur</dt><dd>1 hour</dd>
-      </dl>
-      <div class="spell-body">
-        <p>A protective magical force surrounds you, manifesting as spectral frost covering body and armor. You gain <strong>5 Temp HP</strong>. While you have those Temp HP, any creature that hits you with a <strong>melee attack</strong> takes <strong>5 cold damage</strong>.</p>
-        <div class="at-higher"><strong>Higher Levels:</strong> Both Temp HP and cold damage <strong>+5 per slot above 1st</strong>. <em>Clah at 3rd = 15 Temp HP + 15 cold.</em></div>
-      </div>
-      <div class="spell-source">Warlock (prepared)</div>
-    </div>
   </div>
 </section>
 
@@ -2926,7 +2892,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   <header class="page-head">
     <div class="page-head-left">
       <h1 class="h1-char" style="font-size: 30pt;"><svg class="adinkra" style="width:26px;height:26px;color:var(--gold);margin-right:8px;vertical-align:-3px;"><use href="#adk-nyansapo"/></svg>2<sup style="font-size:20pt;">nd</sup> Level Spells</h1>
-      <div class="char-sub"><strong>11 spells</strong> · Cleric slots <span class="bold">2 ×</span> · Warlock at 3rd via Pact</div>
+      <div class="char-sub"><strong>12 spells</strong> · Cleric slots <span class="bold">2 ×</span> · Warlock at 3rd via Pact</div>
     </div>
     <div class="page-head-right">
       <div class="page-num">Spellbook · Page <strong>6</strong> / 7</div>
@@ -2934,6 +2900,26 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   </header>
 
   <div class="spell-grid" style="grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); min-height: 172mm; gap: 3mm;">
+
+    <!-- Darkness -->
+    <div class="spell prepared">
+      <div class="spell-head">
+        <div class="spell-name">Darkness <span class="gold" style="font-size:8pt;">★</span></div>
+        <div class="spell-level">2nd · Evocation <span class="concentration">◉ conc.</span></div>
+      </div>
+      <dl class="spell-stats">
+        <dt>Cast</dt><dd>Action</dd>
+        <dt>Range</dt><dd>60 ft</dd>
+        <dt>Comp</dt><dd>V, M (cloth or coal)</dd>
+        <dt>Dur</dt><dd>Conc. 10 min</dd>
+      </dl>
+      <div class="spell-body">
+        <p>Magical darkness fills a <strong>15-ft radius sphere</strong> centered on a point or object. Creatures with Darkvision can't see through it; nonmagical light can't illuminate.</p>
+        <p>If centered on an object you can target, the darkness moves with the object. Covering it with something opaque blocks the darkness.</p>
+        <p class="gold" style="font-size:8pt; margin-top:1mm;"><strong>★ Combo:</strong> Cast on the Glimmering Orb. You have the Invisible condition; attackers outside have <strong>disadvantage</strong>. Use Lousy's <strong>Devil's Sight</strong> + Bonus Action <strong>Share Senses</strong> → fire EB at enemies outside with <strong>advantage</strong>.</p>
+      </div>
+      <div class="spell-source">Warlock (prepared)</div>
+    </div>
 
     <!-- Lesser Restoration -->
     <div class="spell always-prep">
@@ -3155,13 +3141,6 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       <div class="spell-source">Warlock (prepared)</div>
     </div>
 
-    <!-- Empty 12th cell -->
-    <div class="spell" style="border-style: dashed; opacity: 0.35; display: flex; align-items: center; justify-content: center; text-align: center; padding: 6mm;">
-      <div style="font-family: 'Fraunces', serif; font-style: italic; color: var(--ink-muted); font-size: 10pt;">
-        <div style="font-size: 24pt; color: var(--gold); opacity: 0.5;">✦</div>
-        <div style="margin-top: 2mm;">open for a<br>future prepared<br>spell</div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -3175,7 +3154,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   <header class="page-head">
     <div class="page-head-left">
       <h1 class="h1-char" style="font-size: 30pt;"><svg class="adinkra" style="width:26px;height:26px;color:var(--gold);margin-right:8px;vertical-align:-3px;"><use href="#adk-nyansapo"/></svg>3<sup style="font-size:20pt;">rd</sup> Level Spells</h1>
-      <div class="char-sub"><strong>5 spells</strong> · Warlock Pact Magic <span class="bold">2 slots</span> — default cast level for all Warlock spells</div>
+      <div class="char-sub"><strong>6 spells</strong> · Warlock Pact Magic <span class="bold">2 slots</span> — default cast level for all Warlock spells</div>
     </div>
     <div class="page-head-right">
       <div class="page-num">Spellbook · Page <strong>7</strong> / 7</div>
@@ -3183,6 +3162,26 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   </header>
 
   <div class="spell-grid" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); min-height: 170mm; gap: 5mm;">
+
+    <!-- Dispel Magic -->
+    <div class="spell prepared">
+      <div class="spell-head">
+        <div class="spell-name">Dispel Magic</div>
+        <div class="spell-level">3rd · Abjuration</div>
+      </div>
+      <dl class="spell-stats">
+        <dt>Cast</dt><dd>Action</dd>
+        <dt>Range</dt><dd>120 ft</dd>
+        <dt>Comp</dt><dd>V, S</dd>
+        <dt>Dur</dt><dd>Instant</dd>
+      </dl>
+      <div class="spell-body">
+        <p>Choose one creature, object, or magical effect within range. Any spell of <strong>3rd level or lower</strong> on the target ends. For each spell of <strong>4th level or higher</strong>, make an ability check using your spellcasting ability (<strong>+7</strong>). DC = 10 + the spell's level. Success = the spell ends.</p>
+        <div class="at-higher"><strong>Higher Levels:</strong> Automatically end spells of the slot's level or lower.</div>
+        <p style="font-size: 8pt; color: var(--ink-muted); font-style: italic; margin-top: 1mm;">Check with party first — only one party member needs this prepared.</p>
+      </div>
+      <div class="spell-source">Warlock (prepared)</div>
+    </div>
 
     <!-- Daylight -->
     <div class="spell always-prep">
@@ -3458,10 +3457,6 @@ em.soft { color: var(--ink-muted); font-style: italic; }
           <span class="big-bubble"></span><span class="big-bubble"></span><span class="big-bubble"></span>
         </div>
         <div class="tracker-row-lg">
-          <span class="tracker-label-inline">Blessing of Trickster</span>
-          <span class="big-bubble"></span><span class="big-bubble"></span><span class="big-bubble"></span>
-        </div>
-        <div class="tracker-row-lg">
           <span class="tracker-label-inline">Glimmering Orb <span class="muted">· disadv.</span></span>
           <span class="big-bubble"></span>
         </div>
@@ -3475,6 +3470,10 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       </div>
 
       <div class="tracker-card">
+        <div class="tracker-row-lg">
+          <span class="tracker-label-inline">Blessing of Trickster <span class="muted">· target</span></span>
+          <div class="tracker-box" style="flex: 1; height: 6mm; margin-left: 4mm;"></div>
+        </div>
         <div class="tracker-row-lg">
           <span class="tracker-label-inline">Magical Cunning <span class="muted">· regain slot</span></span>
           <span class="big-bubble"></span>
@@ -3544,23 +3543,19 @@ em.soft { color: var(--ink-muted); font-style: italic; }
         </div>
       </div>
 
-      <!-- Hex -->
+      <!-- Darkness -->
       <div class="effect-card">
         <div class="effect-head">
           <span class="big-bubble"></span>
-          <strong>Hex</strong>
-          <span class="muted" style="font-size:8pt;">· concentration · 8 hr at Pact 3rd</span>
+          <strong>Darkness</strong>
+          <span class="muted" style="font-size:8pt;">· concentration · 10 min · 15-ft sphere</span>
         </div>
         <div class="effect-row">
-          <span class="tracker-label-inline" style="width:20mm;">Target</span>
+          <span class="tracker-label-inline" style="width:20mm;">On object</span>
           <div class="tracker-box tracker-box-wide"></div>
         </div>
         <div class="effect-row">
-          <span class="tracker-label-inline" style="width:20mm;">Ability disadv.</span>
-          <div class="tracker-box tracker-box-wide"></div>
-        </div>
-        <div class="effect-row">
-          <span class="tracker-label-inline" style="width:20mm;">Hrs left</span>
+          <span class="tracker-label-inline" style="width:20mm;">Min left</span>
           <div class="tracker-box tracker-box-wide"></div>
         </div>
       </div>
@@ -3681,7 +3676,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
     deathSaves.f0 = deathSaves.f1 = deathSaves.f2 = false;
     sync();
     save();
-    flash('Short rest taken — Pact, CD, Tireless, Blessing, Orb reset.');
+    flash('Short rest taken — Pact, CD, Tireless, Orb reset.');
   };
 
   window.longRest = function() {

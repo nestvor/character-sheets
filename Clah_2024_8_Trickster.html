@@ -2676,6 +2676,65 @@ em.soft { color: var(--ink-muted); font-style: italic; }
         </div>
       </div>
 
+      <!-- FEY SPIRIT STATBLOCK -->
+      <div class="section-head mt-3">
+        <svg class="adinkra"><use href="#adk-nyansapo"/></svg>
+        <div class="h2">Fey Spirit <span class="muted" style="font-size:8pt; font-weight:400;">· Summon Fey · Tricksy</span></div>
+        <div class="rule-gold"></div>
+      </div>
+
+      <div class="statblock mb-2">
+        <div class="statblock-head">
+          <div class="statblock-name">Fey Spirit <span class="muted" style="font-size:10pt; font-weight: 400;">· cast at Pact 3rd</span></div>
+          <div class="statblock-type">Small Fey, Neutral · 2024 PHB · <em>your gilded-flower-summoned ally for 1 hour</em></div>
+        </div>
+
+        <div class="statblock-line"><strong>AC</strong> 15 (12 + spell level) &nbsp;·&nbsp; <strong>HP</strong> 30 (+10 per slot above 3rd) &nbsp;·&nbsp; <strong>Speed</strong> 30 ft., fly 30 ft.</div>
+
+        <div class="statblock-stats">
+          <div class="statblock-stat"><div class="label">STR</div><div class="val">13</div><div class="sub">+1 / +1</div></div>
+          <div class="statblock-stat"><div class="label">DEX</div><div class="val">16</div><div class="sub">+3 / +3</div></div>
+          <div class="statblock-stat"><div class="label">CON</div><div class="val">14</div><div class="sub">+2 / +2</div></div>
+          <div class="statblock-stat"><div class="label">INT</div><div class="val">14</div><div class="sub">+2 / +2</div></div>
+          <div class="statblock-stat"><div class="label">WIS</div><div class="val">11</div><div class="sub">+0 / +0</div></div>
+          <div class="statblock-stat"><div class="label">CHA</div><div class="val">16</div><div class="sub">+3 / +3</div></div>
+        </div>
+
+        <div class="statblock-line"><strong>Immunities</strong> Charmed condition</div>
+        <div class="statblock-line"><strong>Senses</strong> darkvision 60 ft.; passive Perception 10</div>
+        <div class="statblock-line"><strong>Languages</strong> Sylvan, understands the languages Clah knows</div>
+        <div class="statblock-line"><strong>CR</strong> none (PB equals Clah's = +3)</div>
+
+        <h4>Actions</h4>
+        <div class="statblock-line">
+          <strong><em>Multiattack.</em></strong> The fey makes <strong>1 Fey Blade attack</strong> (½ × spell level, round down). At Pact 3rd = 1 attack; at 4th-level slot = 2; at 6th = 3.
+        </div>
+        <div class="statblock-line">
+          <strong><em>Fey Blade.</em></strong> <em>Melee Attack Roll:</em> <strong>+7</strong> (Clah's spell attack), reach 5 ft. <strong>Hit:</strong> 13 (2d6 + 6) force damage <span class="muted" style="font-size:8pt;">(2d6 + 3 + spell level)</span>.
+        </div>
+
+        <h4>Bonus Action</h4>
+        <div class="statblock-line" style="padding: 2mm 3mm; background: var(--gold-wash); border-left: 2px solid var(--gold); margin-top: 1.5mm;">
+          <strong><em>Fey Step (Tricksy).</em></strong> The spirit teleports up to <strong>30 ft</strong> to a space it can see, then fills a <strong>10-ft cube within 5 ft of itself</strong> with magical Darkness, lasting <strong>until the end of its next turn</strong>.
+          <div style="margin-top: 1.5mm; padding-top: 1.5mm; border-top: 1px dotted var(--rule); font-size: 8.5pt;">
+            <strong class="gold">DM ruling:</strong> Tricksy darkness blocks darkvision (Darkness-spell-equivalent obscurement). Lousy's Devil's Sight pierces it; party tremorsense pierces it; standard darkvision does not.
+          </div>
+        </div>
+
+        <h4>Tactical Use</h4>
+        <div class="statblock-line"><strong>Skirmisher pattern.</strong> Fey moves to engage an enemy → Multiattack → <strong>Fey Step back to safety</strong> next to Clah or the Invoke Duplicity duplicate, dropping the cube on that <em>safe</em> location. Avoids exposing the fey to retaliation and OAs.</div>
+        <div class="statblock-line"><strong>Cube on Clah.</strong> You're inside heavy obscurement → <strong>Invisible condition</strong>. Enemies outside attacking you have disadvantage; you have advantage on attacks against them (unseen attacker rule). Lousy's Devil's Sight + Share Senses → see through cube to target.</div>
+        <div class="statblock-line"><strong>Cube as wall (line-of-sight block).</strong> Position the cube <em>between</em> Clah and the enemies. Heavy obscurement is <strong>opaque</strong> per 2024 RAW — blocks line of sight through it. Enemies can't see you; you see them via Lousy's Devil's Sight + Share Senses → <strong>advantage on EB</strong> (unseen attacker), and enemies attacking back have <strong>disadvantage</strong> + must guess your square. Fey repositions the cube each round to chase flanking attempts.</div>
+        <div class="statblock-line"><strong>Fey's vision.</strong> Fey only has standard darkvision — <em>blinded inside its own cube</em>. Cube ends at end of fey's <em>next</em> turn, so the fey acts freely on its turn before refreshing the cube. To attack from inside: place cube at edge of fey's space (10-ft cube within 5 ft → adjacent placement, not overlapping fey).</div>
+        <div class="statblock-line"><strong>Tremorsense ally synergy.</strong> Party member with tremorsense can stand inside the cube alongside Clah — both concealed from enemies outside, both sensing freely inside.</div>
+        <div class="statblock-line"><strong>Share Senses (2024).</strong> Bonus Action to perceive through Lousy. <em>2024 change:</em> you no longer go blind/deaf to your own senses while sharing — you get Lousy's Devil's Sight <em>in addition to</em> your normal vision. No downside to using it every turn.</div>
+        <div class="statblock-line"><strong>Verbal commands free.</strong> Direct the fey with speech — no action cost. If silenced or out of earshot, fey defaults to Dodge.</div>
+        <div class="statblock-line"><strong>Initiative timing.</strong> Fey shares Clah's initiative, acts immediately after. Round 1 of casting: cube isn't up until end of fey's turn (setup tax). Round 2+: cube refreshes each round seamlessly.</div>
+        <div class="statblock-line" style="font-size: 8pt; color: var(--ink-muted); font-style: italic; margin-top: 1.5mm; padding-top: 1.5mm; border-top: 1px dotted var(--rule);">
+          <strong>Material focus:</strong> a gilded flower worth 300+ gp. Reusable — buy once, keep it safe.
+        </div>
+      </div>
+
       <!-- PERSONALITY section removed — kept on screen version only via screen/hidden-for-print logic if needed. -->
     </div>
   </div>
@@ -3070,7 +3129,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       <div class="spell-body">
         <p>Magical darkness fills a <strong>15-ft radius sphere</strong> centered on a point or object. Creatures with Darkvision can't see through it; nonmagical light can't illuminate.</p>
         <p>If centered on an object you can target, the darkness moves with the object. Covering it with something opaque blocks the darkness.</p>
-        <p class="gold" style="font-size:8pt; margin-top:1mm;"><strong>★ Combo:</strong> Cast on the Glimmering Orb. You have the Invisible condition; attackers outside have <strong>disadvantage</strong>. Use Lousy's <strong>Devil's Sight</strong> + Bonus Action <strong>Share Senses</strong> → fire EB at enemies outside with <strong>advantage</strong>.</p>
+        <p class="gold" style="font-size:8pt; margin-top:1mm;"><strong>★ Panic button:</strong> Castable from <strong>Cleric 2nd slots</strong> as well as Pact slots. Cast on the Glimmering Orb you carry → you have the <strong>Invisible</strong> condition, enemies have <strong>disadvantage</strong> attacking you. Lousy's Devil's Sight + Share Senses → EB out with advantage. Backup for when Summon Fey isn't up.</p>
       </div>
       <div class="spell-source">Warlock (prepared)</div>
     </div>
@@ -3317,22 +3376,24 @@ em.soft { color: var(--ink-muted); font-style: italic; }
 
   <div class="spell-grid" style="grid-template-columns: repeat(4, 1fr); gap: 4mm;">
 
-    <!-- Dispel Magic -->
+    <!-- Summon Fey -->
     <div class="spell prepared">
       <div class="spell-head">
-        <div class="spell-name">Dispel Magic</div>
-        <div class="spell-level">3rd · Abjuration</div>
+        <div class="spell-name">Summon Fey <span class="gold" style="font-size:8pt;">★</span></div>
+        <div class="spell-level">3rd · Conjuration <span class="concentration">◉ conc.</span></div>
       </div>
       <dl class="spell-stats">
         <dt>Cast</dt><dd>Action</dd>
-        <dt>Range</dt><dd>120 ft</dd>
-        <dt>Comp</dt><dd>V, S</dd>
-        <dt>Dur</dt><dd>Instant</dd>
+        <dt>Range</dt><dd>90 ft</dd>
+        <dt>Comp</dt><dd>V, S, M (gilded flower, 300+ gp, <em>reusable focus</em>)</dd>
+        <dt>Dur</dt><dd>Conc. 1 hr</dd>
       </dl>
       <div class="spell-body">
-        <p>Choose one creature, object, or magical effect within range. Any spell of <strong>3rd level or lower</strong> on the target ends. For each spell of <strong>4th level or higher</strong>, make an ability check using your spellcasting ability (<strong>+7</strong>). DC = 10 + the spell's level. Success = the spell ends.</p>
-        <div class="at-higher"><strong>Higher Levels:</strong> Automatically end spells of the slot's level or lower.</div>
-        <p style="font-size: 8pt; color: var(--ink-muted); font-style: italic; margin-top: 1mm;">Check with party first — only one party member needs this prepared.</p>
+        <p>Summon a <strong>Fey Spirit</strong> in unoccupied space within range. Acts on your initiative, just after your turn. Obeys verbal commands (free). Choose mood at cast — Clah's pick:</p>
+        <p style="margin-top: 1mm;"><strong>Tricksy Mood:</strong> Fey Step (Bonus Action) — teleport up to 30 ft, then fill a <strong>10-ft cube within 5 ft</strong> with <strong>magical Darkness</strong> until end of next turn. <em>DM ruled: this darkness blocks darkvision (like the Darkness spell).</em></p>
+        <p class="gold" style="font-size:8pt; margin-top:1mm;"><strong>★ The Combo:</strong> Tricksy fey teleports adjacent to Clah, drops the cube on him each round. Clah inside = <strong>Invisible condition</strong>; attackers outside have <strong>disadvantage</strong>. Lousy's <strong>Devil's Sight</strong> + Share Senses → <strong>advantage on every EB beam</strong>. Renewable every round.</p>
+        <p style="font-size:8pt; color: var(--ink-muted); font-style: italic; margin-top:1mm;"><strong>Caveat:</strong> The fey only has standard darkvision — it's <em>blinded inside its own cube</em>. After Fey Step it should step <em>outside</em> the cube on its next turn (or attack from outside the cube), or the fey takes attack penalties too.</p>
+        <div class="at-higher"><strong>At higher levels:</strong> spell uses slot level for the Fey's stat block (HP, AC, attack, save DC). At Pact 3rd → CR 3 fey: AC 15, HP ~33, Multiattack ~13 dmg/turn.</div>
       </div>
       <div class="spell-source">Warlock (prepared)</div>
     </div>

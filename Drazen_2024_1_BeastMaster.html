@@ -1355,9 +1355,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   <header class="page-head with-portrait">
     <div class="portrait-wrap">
       <!-- SWAP: replace inner content with <img src="..."> for actual portrait -->
-      <svg class="portrait-placeholder" viewBox="0 0 100 125" preserveAspectRatio="xMidYMid slice">
-        <use href="#portrait-placeholder"/>
-      </svg>
+      <img src="drazen.png" alt="Dražen Korenić">
     </div>
     <div class="page-head-info">
       <h1 class="h1-char">Dražen <em>Korenić</em></h1>
@@ -1657,6 +1655,19 @@ em.soft { color: var(--ink-muted); font-style: italic; }
         <div class="tracker-meta mt-1" style="font-size:7pt;">1/long rest · or spend a slot</div>
       </div>
 
+      <!-- Speak with Animals — Forest Gnome lineage -->
+      <div class="card mb-2">
+        <div class="card-title">Speak w/ Animals <span class="tag">Lineage</span></div>
+        <div class="tracker-row" style="padding: 0;">
+          <span class="tracker-meta">Free casts</span>
+          <div class="bubbles">
+            <span class="bubble gold" data-b="swa0"></span>
+            <span class="bubble gold" data-b="swa1"></span>
+          </div>
+        </div>
+        <div class="tracker-meta mt-1" style="font-size:7pt;">PB/long rest · or ritual cast · or use a slot</div>
+      </div>
+
       <!-- Heroic Inspiration -->
       <div class="card mb-2">
         <div class="card-title">Inspiration <span class="tag">Heroic</span></div>
@@ -1778,22 +1789,24 @@ em.soft { color: var(--ink-muted); font-style: italic; }
     <div class="feature">
       <div class="feature-head">
         <span class="feature-name">Gnomish Cunning</span>
-        <span class="feature-source">Forest Gnome</span>
+        <span class="feature-source">Gnome</span>
       </div>
       <div class="feature-body">
-        <p>You have <strong>advantage on Intelligence, Wisdom, and Charisma saving throws</strong> against being <em>charmed</em> or <em>frightened</em>, and against magic that would put you to sleep.</p>
-        <p class="muted" style="font-size: 8pt; font-style: italic; margin-top: 1mm;">Older Gnomadi are known for their stubborn refusal to be moved by glamour. The earth holds him better than fey words.</p>
+        <p>You have <strong>Advantage on Intelligence, Wisdom, and Charisma saving throws</strong>. Period. No source qualifier — every mental save benefits.</p>
+        <p class="muted" style="font-size: 8pt; font-style: italic; margin-top: 1mm;">Frighten, charm, dominate, illusion, sleep, possession, mental compulsion, magical or mundane — the earth holds him better than fey words. One of the strongest defensive traits in the 2024 game.</p>
       </div>
     </div>
 
     <div class="feature">
       <div class="feature-head">
-        <span class="feature-name">Speak with Small Beasts</span>
-        <span class="feature-source">Forest Gnome</span>
+        <span class="feature-name">Gnomish Lineage · Forest Gnome</span>
+        <span class="feature-source">Wisdom-based</span>
       </div>
       <div class="feature-body">
-        <p>Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Forest gnomes love animals and often have weasels, rabbits, badgers, hedgehogs, and the like as friends.</p>
-        <p class="muted" style="font-size: 8pt; font-style: italic; margin-top: 1mm;">A foundation for the bond that arrives in full at L3. The land already speaks to him; now he speaks back.</p>
+        <p>You know the <strong>Minor Illusion</strong> cantrip and always have the <strong>Speak with Animals</strong> spell prepared.</p>
+        <p>You can cast Speak with Animals <strong>without a spell slot a number of times equal to your Proficiency Bonus</strong> (so <strong>2/Long Rest</strong> at L1–4, 3/LR at L5+), and regain all uses on a Long Rest. You can also cast it with any spell slot you have.</p>
+        <p>Your spellcasting ability for both spells is <strong>Wisdom</strong> (chosen at character creation, same as your Ranger casting stat — clean synergy).</p>
+        <p class="muted" style="font-size: 8pt; font-style: italic; margin-top: 1mm;">A foundation for the bond that arrives in full at L3. Beast Master will give Speak with Animals always-prepared again at L3 — the redundant source doesn't add casts, but the PB-based free casts persist alongside the subclass version.</p>
       </div>
     </div>
 
@@ -1803,8 +1816,8 @@ em.soft { color: var(--ink-muted); font-style: italic; }
         <span class="feature-source">Forest Gnome</span>
       </div>
       <div class="feature-body">
-        <p>You know the <strong>Minor Illusion</strong> cantrip. Intelligence is your spellcasting ability for it.</p>
-        <p>Create either an image of an object (no larger than a 5-foot cube) or a sound. Lasts 1 minute. Investigation check (vs. INT 10 = DC 10) reveals the deception.</p>
+        <p>You know the <strong>Minor Illusion</strong> cantrip via your Forest Gnome lineage. <strong>Wisdom</strong> is your spellcasting ability for it (matches your Ranger casting stat).</p>
+        <p>Create either an image of an object (no larger than a 5-foot cube, no movement, no sound) or a sound (whisper to scream). 1-minute duration. Investigation check vs DC 13 reveals the deception.</p>
         <p class="muted" style="font-size: 8pt; font-style: italic; margin-top: 1mm;">A bird's call to misdirect a sentry. The sound of footsteps in the wrong corridor. A patch of darkness that wasn't there. Small magic for small problems.</p>
       </div>
     </div>
@@ -2055,7 +2068,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   <div class="spellbook-meta mb-3" style="margin-top: -2mm;">
     <span><strong>Ranger DC</strong> 13 · <strong>+5</strong> atk · WIS</span>
     <span><strong>MI Druid DC</strong> 13 · <strong>+5</strong> atk · WIS</span>
-    <span><strong>Minor Illusion DC</strong> 10 · INT</span>
+    <span><strong>Forest Gnome DC</strong> 13 · <strong>+5</strong> atk · WIS</span>
   </div>
 
   <!-- CANTRIPS -->
@@ -2115,9 +2128,9 @@ em.soft { color: var(--ink-muted); font-style: italic; }
       </dl>
       <div class="spell-body">
         <p>Create either an <strong>image of an object</strong> (no larger than a 5-foot cube, can't move, can't make sound) or a <strong>sound</strong> (whisper to scream, anywhere in range).</p>
-        <p>Investigation check (DC = your spell save DC, or DC 10 here using INT) reveals deception.</p>
+        <p>Investigation check (DC <strong>13</strong>, your Forest Gnome lineage spell DC) reveals the deception.</p>
       </div>
-      <div class="spell-source">PHB 2024 · Forest Gnome</div>
+      <div class="spell-source">PHB 2024 · Forest Gnome (WIS)</div>
     </div>
 
   </div>
@@ -2149,6 +2162,26 @@ em.soft { color: var(--ink-muted); font-style: italic; }
         <p><strong>Free casts: 2 / Long Rest</strong> (Favored Enemy).</p>
       </div>
       <div class="spell-source">PHB 2024 · Ranger always-prep</div>
+    </div>
+
+    <!-- Speak with Animals — Forest Gnome lineage, always prepared, free PB-uses -->
+    <div class="spell always-prep">
+      <div class="spell-head">
+        <div class="spell-name">Speak with Animals</div>
+        <div class="spell-level">1st · Divination <span class="ritual">ritual</span> &nbsp;<span style="color:var(--gold);">★ always prepared</span></div>
+      </div>
+      <dl class="spell-stats">
+        <dt>Cast</dt><dd>Action</dd>
+        <dt>Range</dt><dd>Self</dd>
+        <dt>Comp.</dt><dd>V, S</dd>
+        <dt>Dur.</dt><dd>10 min</dd>
+      </dl>
+      <div class="spell-body">
+        <p>You gain the ability to <strong>comprehend and verbally communicate with Beasts</strong> for the duration. The knowledge and awareness of many beasts is limited by their intelligence — at minimum they can give you information about nearby locations and monsters, as the GM determines.</p>
+        <p><strong>Free casts: 2 / Long Rest</strong> (Forest Gnome lineage). Or cast as a <strong>ritual</strong> at no slot cost. Or use any spell slot.</p>
+        <p class="muted" style="font-size: 7.5pt; margin-top:1mm;"><em>Birds know which valleys hold men with crossbows. Foxes know who passed through. Rats know what was buried. Mrki, of course, has always known.</em></p>
+      </div>
+      <div class="spell-source">PHB 2024 · Forest Gnome (WIS)</div>
     </div>
 
     <!-- Faerie Fire — MI free cast -->
@@ -2222,7 +2255,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
   <div class="card card-alt">
     <div class="card-body" style="font-size: 9pt; line-height: 1.55;">
       <p><strong class="gold">Level 2.</strong> Slots: 2 · Prepared: 3. Add <strong>Two-Weapon Fighting</strong> style (+DEX to off-hand) and <strong>Deft Explorer</strong> (Expertise: Survival). Suggested third prep: <strong>Ensnaring Strike</strong> (lock a fleeing target).</p>
-      <p><strong class="gold">Level 3.</strong> Slots: 3 · Prepared: 4 + 2 free subclass spells. Beast Master kicks in. <strong>Longstrider</strong> and <strong>Speak with Animals</strong> become always-prepared (do not count against limit). Suggested combat loadout:</p>
+      <p><strong class="gold">Level 3.</strong> Slots: 3 · Prepared: 4 + 2 free subclass spells. Beast Master kicks in. <strong>Longstrider</strong> and <strong>Speak with Animals</strong> become always-prepared via subclass — Speak with Animals is already lineage-prepared so this is redundant (the lineage's PB free casts persist). Suggested combat loadout:</p>
       <ul style="margin: 1mm 0 0 4mm; font-size: 9pt;">
         <li><strong>Hunter's Mark</strong> (always-prep) — single-target damage tracker</li>
         <li><strong>Faerie Fire</strong> (MI free + slot) — swarm opener, party advantage</li>
@@ -2309,6 +2342,13 @@ em.soft { color: var(--ink-muted); font-style: italic; }
           <span class="tracker-label-inline">Faerie Fire free</span>
           <div class="bubbles">
             <span class="big-bubble blood"></span>
+          </div>
+        </div>
+        <div class="tracker-row-lg">
+          <span class="tracker-label-inline">Speak w/ Anim.</span>
+          <div class="bubbles">
+            <span class="big-bubble gold"></span>
+            <span class="big-bubble gold"></span>
           </div>
         </div>
         <div class="tracker-row-lg">
@@ -2484,6 +2524,7 @@ em.soft { color: var(--ink-muted); font-style: italic; }
     'r10','r11',                 // ranger 1st-level slots
     'hm0','hm1',                 // hunter's mark free casts
     'ff0',                       // faerie fire MI free cast
+    'swa0','swa1',               // speak with animals (lineage, PB free casts)
     'hi0',                       // heroic inspiration
     'hd0'                        // hit die
   ];
